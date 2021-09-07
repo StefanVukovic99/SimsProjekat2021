@@ -1,0 +1,65 @@
+[
+  {
+    "password": "abc",
+    "UserType": 0,
+    "Jmbg": "0",
+    "Email": "marko@email.com",
+    "FirstName": "Marko",
+    "LastName": "Markovic",
+    "Phone": "+381 6123456"
+  },
+  {
+    "password": "abc",
+    "UserType": 1,
+    "Jmbg": "1",
+    "Email": "dokor@email.com",
+    "FirstName": "Doktor",
+    "LastName": "Doktorovic",
+    "Phone": "+1 564 4564 65"
+  },
+  {
+    "password": "abc",
+    "UserType": 2,
+    "Jmbg": "2",
+    "Email": "apotekarko@email.com",
+    "FirstName": "Apotekarko",
+    "LastName": "Apotekarkovic",
+    "Phone": "+5 644 5646 5"
+  },
+  {
+    "password": "filip123",
+    "UserType": 0,
+    "Jmbg": "4321",
+    "Email": "filip@email.com",
+    "FirstName": "Filip",
+    "LastName": "Filipovic",
+    "Phone": "+03123124"
+  },
+  {
+    "password": "abc",
+    "UserType": 0,
+    "Jmbg": "431",
+    "Email": "imejl",
+    "FirstName": "Goran",
+    "LastName": "Bregovic",
+    "Phone": "555222"
+  },
+  {
+    "password": null,
+    "UserType": 0,
+    "Jmbg": "999",
+    "Email": "Imejl",
+    "FirstName": "Ime",
+    "LastName": "Prezime",
+    "Phone": "Telefon"
+  },
+  {
+    "password": null,
+    "UserType": 0,
+    "Jmbg": "9999",
+    "Email": "gdxgs",
+    "FirstName": "Ime",
+    "LastName": "Prezime",
+    "Phone": "Telefon"
+  }
+]

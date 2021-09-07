@@ -1,0 +1,26 @@
+[
+  {
+    "name": "sicilijum-dioksid",
+    "description": "Si0_2"
+  },
+  {
+    "name": "magnezijum",
+    "description": "Mg"
+  },
+  {
+    "Name": "kalcijum",
+    "Description": "Ca"
+  },
+  {
+    "Name": "taurin",
+    "Description": "psihostimulans"
+  },
+  {
+    "Name": "kofein",
+    "Description": "psihostimulans"
+  },
+  {
+    "Name": "ibuprofen",
+    "Description": "analgetik, antipiretik"
+  }
+]

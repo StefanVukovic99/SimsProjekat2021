@@ -1,0 +1,160 @@
+[
+  {
+    "Id": "AF345612",
+    "Name": "Brufen",
+    "Manufacturer": "Hemofarm",
+    "Price": 3.5,
+    "Amount": 14,
+    "Ingredients": [
+      {
+        "Name": "ibuprofen",
+        "Description": "analgetik, antipiretik"
+      }
+    ],
+    "Accepted": true,
+    "Deleted": true
+  },
+  {
+    "Id": "DFSJU94021BKJ",
+    "Name": "Kofein Tablete",
+    "Manufacturer": "Pfizer",
+    "Price": 2.77,
+    "Amount": 9,
+    "Ingredients": [
+      {
+        "Name": "kalcijum",
+        "Description": "Ca"
+      },
+      {
+        "Name": "kofein",
+        "Description": "psihostimulans"
+      },
+      {
+        "Name": "taurin",
+        "Description": "psihostimulans"
+      }
+    ],
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "HFDA7HJ432KB",
+    "Name": "Pseudoefedrin",
+    "Manufacturer": "Sinofarm",
+    "Price": 5.43,
+    "Amount": 27,
+    "Ingredients": [
+      {
+        "Name": "kofein",
+        "Description": "psihostimulans"
+      },
+      {
+        "Name": "kalcijum",
+        "Description": "Ca"
+      }
+    ],
+    "Accepted": true,
+    "Deleted": true
+  },
+  {
+    "Id": "GFJ4312H41",
+    "Name": "Panklav",
+    "Manufacturer": "Braca i Sinovi",
+    "Price": 1.43,
+    "Amount": 52,
+    "Ingredients": [
+      {
+        "Name": "silicijum-dioksid",
+        "Description": "...........opis sastojka..............."
+      },
+      {
+        "Name": "magnezijum",
+        "Description": "...........opis sastojka..............."
+      },
+      {
+        "Name": "kalcijum",
+        "Description": "...........opis sastojka..............."
+      }
+    ],
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "DSAJKLDASKJL",
+    "Name": "Brufen 600mg",
+    "Manufacturer": "EkoMediko",
+    "Price": 5.33,
+    "Amount": 17,
+    "Ingredients": [
+      {
+        "Name": "kalcijum",
+        "Description": "...........opis sastojka..............."
+      },
+      {
+        "Name": "magnezijum",
+        "Description": "...........opis sastojka..............."
+      }
+    ],
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "fdsafds",
+    "Name": "Neki novi lek",
+    "Manufacturer": "EkoMedico",
+    "Price": 5.0,
+    "Amount": 17,
+    "Ingredients": [
+      {
+        "Name": "kofein",
+        "Description": "...........opis sastojka..............."
+      },
+      {
+        "Name": "taurin",
+        "Description": "...........opis sastojka..............."
+      }
+    ],
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "fdsafds",
+    "Name": "fdsa",
+    "Manufacturer": "asa",
+    "Price": 1.0,
+    "Amount": 11,
+    "Ingredients": [
+      {
+        "Name": "kofein",
+        "Description": "...........opis sastojka..............."
+      }
+    ],
+    "Accepted": false,
+    "Deleted": false
+  },
+  {
+    "Id": "fdsafdsa",
+    "Name": "fdsa",
+    "Manufacturer": "aaaa",
+    "Price": 3.0,
+    "Amount": 11,
+    "Ingredients": [
+      {
+        "Name": "kofein",
+        "Description": "...........opis sastojka..............."
+      }
+    ],
+    "Accepted": false,
+    "Deleted": false
+  },
+  {
+    "Id": "Id",
+    "Name": "Ime",
+    "Manufacturer": "Proizvodjac",
+    "Price": 2.3,
+    "Amount": 5,
+    "Ingredients": [],
+    "Accepted": false,
+    "Deleted": true
+  }
+]

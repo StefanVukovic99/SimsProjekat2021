@@ -1,0 +1,137 @@
+﻿<Window x:Class="SimsBolnica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimsBolnica"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="username_box" HorizontalAlignment="Left" Height="23" Margin="322,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="password_box" HorizontalAlignment="Left" Height="23" Margin="322,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="login_button" Content="Prijava" HorizontalAlignment="Left" Margin="347,266,0,0" VerticalAlignment="Top"  Width="75" Click="Button_Click"/>
+        <TextBlock x:Name="credentials_warning" HorizontalAlignment="Left" Margin="322,290,0,0" TextWrapping="Wrap" Text="Kredencijali su pogresni." VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+        <Button x:Name="medicines_button" Content="Lekovi" HorizontalAlignment="Left" Margin="347,146,0,0" VerticalAlignment="Top" Width="75" Click="medicines_click" Visibility="Hidden"/>
+        <Button x:Name="ingredients_button" Content="Sastojci" HorizontalAlignment="Left" Margin="347,190,0,0" VerticalAlignment="Top" Width="75" Click="ingredients_click" Visibility="Hidden"/>
+        <Button x:Name="receipts_button" Content="Računi" HorizontalAlignment="Left" Margin="347,237,0,0" VerticalAlignment="Top" Width="75" Click="receipts_click" Visibility="Hidden"/>
+        <Button x:Name="patients_button" Content="Pacijenti" HorizontalAlignment="Left" Margin="347,237,0,0" VerticalAlignment="Top" Width="75" Click="patients_click" Visibility="Hidden"/>
+        <Button x:Name="registration_button" Content="Registracija" HorizontalAlignment="Left" Margin="442,237,0,0" VerticalAlignment="Top" Width="75" Click="registration_click" Visibility="Hidden"/>
+        <Button x:Name="new_med_button" Content="Novi lek" HorizontalAlignment="Left" Margin="448,145,0,0" VerticalAlignment="Top" Width="75" Click="new_med_click" Visibility="Hidden"/>
+
+        <Button x:Name="back_button" Content="Nazad" HorizontalAlignment="Left" Margin="709,391,0,0" VerticalAlignment="Top" Width="75" Click="back_click" Visibility="Hidden"/>
+
+        <DataGrid x:Name="medicines_grid"
+                            AutoGenerateColumns="False"
+                            IsReadOnly="True" Width="579" HorizontalAlignment="Center" Margin="2,0,212.6,0" Visibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id"
+                            Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Naziv"
+                            Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Proizvodjac"
+                            Binding="{Binding Manufacturer}" />
+                <DataGridTextColumn Header="Cena"
+                            Binding="{Binding Price}" />
+                <DataGridTextColumn Header="Kolicina"
+                            Binding="{Binding Amount}" />
+                <DataGridTextColumn Header="Odobren"
+                            Binding="{Binding Accepted}" />
+                <DataGridTextColumn Header="Obrisan"
+                            Binding="{Binding Deleted}" />
+                <DataGridTemplateColumn Header="Ingredients">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl ItemsSource="{Binding Ingredients}" DisplayMemberPath="Name"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+     
+        <TextBox x:Name="search_meds_box" HorizontalAlignment="Left" Height="23" Margin="660,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="search_meds_box_changed" Visibility="Hidden"/>
+        <ComboBox x:Name="search_meds_combo" HorizontalAlignment="Left" Margin="598,33,0,0" VerticalAlignment="Top" Width="46" Height="23" RenderTransformOrigin="0.905,0.859" SelectionChanged="search_meds_combo_change" Visibility="Hidden">
+            <ComboBox.Items>
+                <ComboBoxItem Tag="1">Id</ComboBoxItem>
+                <ComboBoxItem Tag="2">Naziv</ComboBoxItem>
+                <ComboBoxItem Tag="3">Proizvodjac</ComboBoxItem>
+                <ComboBoxItem Tag="4">Cena</ComboBoxItem>
+                <ComboBoxItem Tag="5">Kolicina</ComboBoxItem>
+                <ComboBoxItem Tag="6">Odobren</ComboBoxItem>
+                <ComboBoxItem Tag="7">Obrisan</ComboBoxItem>
+                <ComboBoxItem Tag="8">Sastojci</ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+        
+        <Button x:Name="buy_meds_button" Content="Dodaj" HorizontalAlignment="Left" Margin="637,78,0,0" VerticalAlignment="Top" Width="75" Click="buy_click" Visibility="Hidden"/>
+        <Button x:Name="checkout_button" Content="Kupi" HorizontalAlignment="Left" Margin="637,354,0,0" VerticalAlignment="Top" Width="75" Click="checkout_click" Visibility="Hidden"/>
+        <TextBox x:Name="quantity_box" HorizontalAlignment="Left" Height="23" Margin="617,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+        <Button x:Name="delete_med_button" Content="Obrisi" HorizontalAlignment="Left" Margin="634,146,0,0" VerticalAlignment="Top" Width="75" Click="delete_med_button_click" Visibility="Hidden"/>
+        <TextBox x:Name="delete_med_box" HorizontalAlignment="Left" Height="23" Margin="617,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+        <Button x:Name="approve_button" Content="Odobri" HorizontalAlignment="Left" Margin="634,146,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="approve_click"/>
+        <Button x:Name="reject_button" Content="Odbij" HorizontalAlignment="Left" Margin="636,177,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="reject_click"/>
+        
+        <DataGrid x:Name="ingredients_grid"
+                            AutoGenerateColumns="False"
+                            IsReadOnly="True" Width="579" HorizontalAlignment="Center" Margin="2,0,212.6,0" Visibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Naziv"
+                            Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Opis"
+                            Binding="{Binding Description}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox x:Name="search_ingredients_box" HorizontalAlignment="Left" Height="23" Margin="660,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="search_ingredients_box_changed" Visibility="Hidden"/>
+        <ComboBox x:Name="search_ingredients_combo" HorizontalAlignment="Left" Margin="598,33,0,0" VerticalAlignment="Top" Width="46" Height="23" RenderTransformOrigin="0.905,0.859" SelectionChanged="search_ingredients_combo_change" Visibility="Hidden">
+            <ComboBox.Items>
+                <ComboBoxItem Tag="1">Naziv</ComboBoxItem>
+                <ComboBoxItem Tag="2">Opis</ComboBoxItem>
+                <ComboBoxItem Tag="3">Lek</ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+
+        <DataGrid x:Name="receipts_grid"
+                            AutoGenerateColumns="False"
+                            IsReadOnly="True" Width="579" HorizontalAlignment="Center" Margin="2,0,212.6,0" Visibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Datum"
+                            Binding="{Binding DateAndTime}" />
+                <DataGridTextColumn Header="Ukupno"
+                            Binding="{Binding Total}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid x:Name="patients_grid"
+                            AutoGenerateColumns="False"
+                            IsReadOnly="True" Width="579" HorizontalAlignment="Center" Margin="2,0,212.6,0" Visibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ime"
+                            Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Prezime"
+                            Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="JMBG"
+                            Binding="{Binding Jmbg}" />
+                <DataGridTextColumn Header="Imejl"
+                            Binding="{Binding Email}" />
+                <DataGridTextColumn Header="Telefon"
+                            Binding="{Binding Phone}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="name_box" HorizontalAlignment="Left" Height="23" Margin="44,56,0,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="surname_box" HorizontalAlignment="Left" Height="23" Margin="44,97,0,0" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="jmbg_box" HorizontalAlignment="Left" Height="23" Margin="44,138,0,0" TextWrapping="Wrap" Text="JMBG" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="email_box" HorizontalAlignment="Left" Height="23" Margin="44,179,0,0" TextWrapping="Wrap" Text="Imejl" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="phone_box" HorizontalAlignment="Left" Height="23" Margin="44,222,0,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="confirm_reg_button" Content="Registruj" HorizontalAlignment="Left" Margin="44,266,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="confirm_reg_click"/>
+
+        <TextBox x:Name="med_name_box" HorizontalAlignment="Left" Height="23" Margin="44,56,0,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="med_id_box" HorizontalAlignment="Left" Height="23" Margin="44,208,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="med_manufacturer_box" HorizontalAlignment="Left" Height="23" Margin="44,168,0,0" TextWrapping="Wrap" Text="Proizvodjac" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="med_price_box" HorizontalAlignment="Left" Height="23" Margin="44,132,0,0" TextWrapping="Wrap" Text="Cena" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="med_amount_box" HorizontalAlignment="Left" Height="23" Margin="44,96,0,0" TextWrapping="Wrap" Text="Kolicina" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="confirm_new_med_button" Content="Registruj" HorizontalAlignment="Left" Margin="44,266,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="confirm_new_med_click"/>
+
+    </Grid>
+</Window>

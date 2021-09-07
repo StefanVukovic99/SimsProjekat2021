@@ -1,0 +1,45 @@
+[
+  {
+    "Id": 9,
+    "Apothecary": "Apotekarko Apotekarkovic",
+    "DateAndTime": "05.09.2021.",
+    "Medicines": {
+      "DSAJKLDASKJL": 4,
+      "GFJ4312H41": 1
+    },
+    "Total": 4.0,
+    "PatientJMBG": "0"
+  },
+  {
+    "Id": 32,
+    "Apothecary": "Apotekarko Apotekarkovic",
+    "DateAndTime": "05.08.2021.",
+    "Medicines": {
+      "DSAJKLDASKJL": 4,
+      "GFJ4312H41": 1
+    },
+    "Total": 3.0,
+    "PatientJMBG": "0"
+  },
+  {
+    "Id": 84,
+    "Apothecary": "Apotekarko Apotekarkovic",
+    "DateAndTime": "05.07.2021.",
+    "Medicines": {
+      "DSAJKLDASKJL": 4,
+      "GFJ4312H41": 1
+    },
+    "Total": 2.0,
+    "PatientJMBG": "0"
+  },
+  {
+    "Id": 0,
+    "Apothecary": "",
+    "DateAndTime": "08.09.2021",
+    "Medicines": {
+      "DSAJKLDASKJL": 2
+    },
+    "Total": 10.66,
+    "PatientJMBG": "0"
+  }
+]
